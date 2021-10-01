@@ -15,3 +15,5 @@ add_library(
 )
 
 setup_score_plugin(score_addon_my_audio_effect)
+
+target_link_libraries(score_addon_my_audio_effect PUBLIC score_plugin_engine)
