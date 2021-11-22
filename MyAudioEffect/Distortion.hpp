@@ -26,7 +26,7 @@ struct Distortion
      * Here we define the inputs & outputs ports of our plug-in.
      */
     static const constexpr auto controls
-        = std::make_tuple(Control::FloatSlider{"Gain", 0., 2., 1.});
+        = tuplet::make_tuple(Control::FloatSlider{"Gain", 0., 2., 1.});
     static const constexpr audio_in audio_ins[]{"in"};
     static const constexpr audio_out audio_outs[]{"out"};
   };
