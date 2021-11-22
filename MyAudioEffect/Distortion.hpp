@@ -51,8 +51,8 @@ struct Distortion
   )
   {
     // Allocate outputs
-    const auto chans = p1.samples.size();
-    p2.samples.resize(chans);
+    const auto chans = p1.channels();
+    p2.set_channels(chans);
 
     // When do we start writing, and for how many samples
     const int64_t N = t.physical_write_duration(st.modelToSamples());
@@ -62,8 +62,8 @@ struct Distortion
     const double gain = g;
     for (std::size_t i = 0; i < chans; i++)
     {
-      auto& in = p1.samples[i];
-      auto& out = p2.samples[i];
+      auto& in = p1.channel(i);
+      auto& out = p2.channel(i);
 
       const int64_t samples = in.size();
       int64_t max = std::min(N, samples);
