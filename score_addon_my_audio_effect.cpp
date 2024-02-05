@@ -12,7 +12,7 @@
 score_addon_my_audio_effect::score_addon_my_audio_effect() = default;
 score_addon_my_audio_effect::~score_addon_my_audio_effect() = default;
 
-std::vector<std::unique_ptr<score::InterfaceBase>>
+std::vector<score::InterfaceBase*>
 score_addon_my_audio_effect::factories(
     const score::ApplicationContext& ctx,
     const score::InterfaceKey& key) const
