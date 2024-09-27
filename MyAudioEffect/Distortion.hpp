@@ -18,6 +18,7 @@ struct Distortion
     static const constexpr auto author = "<AUTHOR>";
     static const constexpr auto kind = Process::ProcessCategory::AudioEffect;
     static const constexpr auto description = "<DESCRIPTION>";
+    static const constexpr auto manual_url = "<HELP>";
     static const constexpr auto tags = std::array<const char*, 0>{};
     static const uuid_constexpr auto uuid
         = make_uuid("00000000-0000-0000-0000-000000000000");
